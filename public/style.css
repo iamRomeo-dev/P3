@@ -102,6 +102,63 @@ body {
   border-radius: 1rem;
 }
 
+.card_resto {
+  padding: 0.75rem;
+  border: none;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+}
+.card_resto:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
+  transition: 0.5s;
+}
+.card_resto--mb {
+  margin-bottom: 1rem;
+}
+.card_resto--full-width {
+  width: 100%;
+}
+.card_resto--rounded {
+  border-radius: 1rem;
+}
+
+.card__resto__img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card_resto_desc {
+  margin-left: 1rem;
+}
+.card_resto_desc p::before {
+  content: "🌸";
+  font-weight: 900;
+  margin-right: 0.75rem;
+  width: 1rem;
+}
+.card_resto_desc p::after {
+  content: "🌸";
+  color: transparent;
+  font-weight: 900;
+  margin-left: 0.75rem;
+  width: 1rem;
+}
+
+.card__resto___desc__nom {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
 .header {
   text-align: center;
   border-bottom: solid 3px #dfdfdf;
@@ -141,6 +198,9 @@ body {
 .accueil__sousTitre {
   font-size: 0.8rem;
   color: #999999;
+}
+.accueil--back-coloured {
+  background-color: #f7f7f7;
 }
 
 .cards {

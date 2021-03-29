@@ -1,3 +1,7 @@
+@mixin font--logo{
+  font-family: "Shrikhand", cursive;
+}
+
 @mixin txt--center {
   text-align: center;
 }
@@ -59,6 +63,29 @@ $position: "1";
     line-height: 1.1rem;
     background-color: $colour-primary;
     color: $colour-cards;
+  }
+  &--mb {
+    margin-bottom: 1rem;
+  }
+  &--full-width {
+    width: 100%;
+  }
+  &--rounded {
+    border-radius: 1rem;
+  }
+}
+
+@mixin card_resto {
+  padding: 0.75rem;
+  border: none;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
+    transition: 0.5s;
   }
   &--mb {
     margin-bottom: 1rem;
