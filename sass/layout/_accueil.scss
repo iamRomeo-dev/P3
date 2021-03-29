@@ -1,0 +1,13 @@
+.accueil {
+  @include txt--center;
+  background-color: $colour-cards;
+  padding: 2rem;
+  &__titre {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  &__sousTitre {
+    font-size: 0.8rem;
+    color: $colour-subTitle;
+  }
+}

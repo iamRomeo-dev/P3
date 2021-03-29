@@ -1,0 +1,23 @@
+.cards {
+  width: 90%;
+  margin: 3rem auto;
+  &--colored {
+    background-color: $colour-tertiare;
+  }
+}
+
+.card__text {
+  &::before {
+    content: "🌸";
+    font-weight: 900;
+    margin-right: 1rem;
+    width: 1rem;
+  }
+  &::after {
+    content: "🌸";
+    color: transparent;
+    font-weight: 900;
+    margin-left: 1rem;
+    width: 1rem;
+  }
+}

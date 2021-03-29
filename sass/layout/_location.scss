@@ -1,0 +1,22 @@
+.location {
+  @include txt--center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #ededed;
+  font-size: .8rem;
+  color: #555454;
+  &::before {
+    content: "🌸";
+    font-weight: 900;
+    margin-right: 0.75rem;
+    width: 1rem;
+  }
+  //le after sert juste a permettre un allignement symetrique
+  &::after {
+    content: "🌸";
+    color: transparent;
+    font-weight: 900;
+    margin-left: 0.75rem;
+    width: 1rem;
+  }
+}

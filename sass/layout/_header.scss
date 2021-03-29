@@ -1,4 +1,4 @@
 .header {
-    text-align: center;
-    border-bottom: solid 2px black;
+    @include txt--center;
+    border-bottom: solid 3px #dfdfdf;
 }
