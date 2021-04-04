@@ -10,4 +10,49 @@
 @import "./layout/header";
 @import "./layout/location";
 @import "./layout/accueil";
-@import "./layout/card";
+@import "./layout/cards";
+@import "./layout/footer";
+
+$cd-btn: green;
+.btnn {
+  max-width: 100px;
+  background-color: $cd-btn;
+  border: 1px solid $cd-btn;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  transition: transform 400ms;
+  &:hover {
+    transform: scale(1.15);
+  }
+  // &:active {
+  //     & + .progress {
+  //         & > .progress__bar {
+  //                 transform: scaleX(1);
+  //             }
+  //         }
+  //     }
+}
+
+// .progress {
+//   border: 1px solid blue;
+//   padding: 10px;
+//   height: 30px;
+//   width: 500px;
+ 
+//   &:hover {
+//     & > .progress__bar {
+//       transform: scaleX(1);
+//       background-color: brown;
+//     }
+//   }
+//   &__bar {
+//     height: 100%;
+//     transform-origin: 0% 50%;
+//     transform: scaleX(0);
+//     transition: transform 1000ms;
+//   }
+// }

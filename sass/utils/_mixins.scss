@@ -1,4 +1,4 @@
-@mixin font--logo{
+@mixin font--logo {
   font-family: "Shrikhand", cursive;
 }
 
@@ -18,10 +18,11 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-weight: bold;
+  transition: transform 1000ms ease-in-out;
 
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
-    transition: 0.5s;
+    transform: scale(1.2);
   }
   &--mb {
     margin-top: 0.5rem;
@@ -69,6 +70,9 @@ $position: "1";
   }
   &--full-width {
     width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
   &--rounded {
     border-radius: 1rem;
@@ -76,22 +80,23 @@ $position: "1";
 }
 
 @mixin card_resto {
-  padding: 0.75rem;
+  max-height: 200px;
+  width: 100%;
+  max-width: 500px;
+  padding: 0.25rem;
   border: none;
   color: #000;
   background-color: transparent;
   cursor: pointer;
   font-weight: 600;
   text-align: left;
+
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
     transition: 0.5s;
   }
   &--mb {
     margin-bottom: 1rem;
-  }
-  &--full-width {
-    width: 100%;
   }
   &--rounded {
     border-radius: 1rem;

@@ -7,8 +7,10 @@
 }
 
 .card__resto__img {
-  width: 100px;
-  height: 100px;
+  width: 40%;
+  min-width: 100px;
+  height: auto;
+  min-height: 100px;
   object-fit: cover;
   border-radius: 1rem;
 }
@@ -34,9 +36,16 @@
 
 .card__resto___desc__nom {
   @include font--logo;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
+
 }
+
+
+.card__resto___desc__address {
+  font-size: 0.75rem;
+}
+
 
 .flex {
   display: flex;
