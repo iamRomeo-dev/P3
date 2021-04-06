@@ -23,7 +23,8 @@
 
 .card__text {
   &::before {
-    content: "🌸";
+    @include fontAwsome;
+    content: "\f3cd";
     font-weight: 900;
     margin-right: 1rem;
     width: 1rem;

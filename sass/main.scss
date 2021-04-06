@@ -10,7 +10,7 @@
 @import "./layout/header";
 @import "./layout/location";
 @import "./layout/accueil";
-@import "./layout/cards";
+@import "./layout/restaurants";
 @import "./layout/footer";
 
 $cd-btn: green;
@@ -28,31 +28,4 @@ $cd-btn: green;
   &:hover {
     transform: scale(1.15);
   }
-  // &:active {
-  //     & + .progress {
-  //         & > .progress__bar {
-  //                 transform: scaleX(1);
-  //             }
-  //         }
-  //     }
 }
-
-// .progress {
-//   border: 1px solid blue;
-//   padding: 10px;
-//   height: 30px;
-//   width: 500px;
- 
-//   &:hover {
-//     & > .progress__bar {
-//       transform: scaleX(1);
-//       background-color: brown;
-//     }
-//   }
-//   &__bar {
-//     height: 100%;
-//     transform-origin: 0% 50%;
-//     transform: scaleX(0);
-//     transition: transform 1000ms;
-//   }
-// }

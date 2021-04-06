@@ -7,19 +7,24 @@
 }
 
 .card__resto__img {
-  width: 40%;
-  min-width: 100px;
-  height: auto;
+  width: 33%;
+  // min-width: 100px;
   min-height: 100px;
+  // min-height: 125px;
+  max-height: 135px;
   object-fit: cover;
   border-radius: 1rem;
 }
 
 .card_resto_desc {
   margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   p {
     &::before {
-      content: "🌸";
+      @include fontAwsome;
+      content: "\f3c5";
       font-weight: 900;
       margin-right: 0.75rem;
       width: 1rem;
@@ -36,17 +41,18 @@
 
 .card__resto___desc__nom {
   @include font--logo;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
-
 }
-
 
 .card__resto___desc__address {
   font-size: 0.75rem;
 }
 
-
+.card__resto___desc__recommendations {
+  display: flex;
+  justify-content: space-between;
+}
 .flex {
   display: flex;
 }
