@@ -1,0 +1,57 @@
+.loader {
+  border: 10px solid transparent;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+ // animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear forwards;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+
+.accueil,
+header,
+.location,
+.list__block,
+.bg--color--full-width,
+footer {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
