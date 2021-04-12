@@ -168,9 +168,30 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+@media screen and (min-width: 1024px) {
+  .list__block {
+    width: 70%;
+  }
+}
 
 .list i {
   width: 5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list__container {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list__restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 
 .bg--color--full-width {
@@ -186,6 +207,11 @@ body {
   text-decoration: none;
   margin-bottom: 1.5rem;
   position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 47%;
+  }
 }
 
 .card img {
@@ -253,6 +279,11 @@ footer {
   justify-content: flex-start;
   flex-direction: column;
 }
+@media screen and (min-width: 1024px) {
+  .footer_container {
+    align-items: center;
+  }
+}
 .footer_container h4 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
@@ -264,6 +295,12 @@ footer {
   list-style: none;
   padding-left: 0;
   line-height: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer_container ul {
+    display: flex;
+    gap: 5rem;
+  }
 }
 .footer_container li {
   text-decoration: none;

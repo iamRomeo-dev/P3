@@ -10,6 +10,9 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  @media screen and (min-width: 1024px) {
+    align-items: center;
+  }
   h4 {
     font-family: "Shrikhand", cursive;
 
@@ -22,6 +25,10 @@ footer {
     list-style: none;
     padding-left: 0;
     line-height: 1.5rem;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      gap: 5rem;
+    }
   }
   li {
     text-decoration: none;

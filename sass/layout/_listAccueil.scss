@@ -1,13 +1,30 @@
 .list__block {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  @include width_page;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  @media screen and (min-width: 1024px) {
+    width: $width-desktop;
+  }
 }
 
 .list i {
   width: 5rem;
+}
+
+.list__container {
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.list__restaurants {
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 
 .bg--color--full-width {
@@ -23,6 +40,9 @@
   text-decoration: none;
   margin-bottom: 1.5rem;
   position: relative;
+  @media screen and (min-width: 1024px) {
+    width: 47%;
+  }
 }
 
 .card img {
