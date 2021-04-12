@@ -37,15 +37,15 @@
 }
 
 
-.accueil,
-header,
-.location,
-.list__block,
-.bg--color--full-width,
-footer {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out 3s forwards;
-}
+// .accueil,
+// header,
+// .location,
+// .list__block,
+// .bg--color--full-width,
+// footer {
+//   opacity: 0;
+//   animation: fadeIn 1s ease-in-out 3s forwards;
+// }
 
 @keyframes fadeOut {
   0% {

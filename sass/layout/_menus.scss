@@ -1,0 +1,97 @@
+.menus_list {
+  background-color: $colour-cards;
+  border-radius: 20px 20px 0 0;
+  margin-top: -30px;
+  position: relative;
+}
+
+.menus_list__block {
+  @include width_page;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: 1024px) {
+    width: $width-desktop;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.resto_name_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.resto_name {
+  @include font--logo;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.entreePlatDessert h4 {
+  font-weight: 100;
+
+  font-family: "Roboto", sans-serif, "Trebuchet MS", Arial, Helvetica,
+    sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dash {
+  display: flex;
+  height: 3px;
+  width: 30px;
+  background-color: #99e2d0;
+  margin-bottom: 1.5rem;
+}
+
+.card_recipe {
+  padding: 0.75rem;
+  border: none;
+  color: #000;
+  background-color: $colour-cards;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
+    transition: 0.5s;
+  }
+  h4 {
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 0;
+  }
+}
+
+.recipeBaseline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+// .checked {
+//   width: 40px;
+//   height: 40px;
+//   background-color: green;
+
+// }

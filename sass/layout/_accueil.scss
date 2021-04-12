@@ -13,4 +13,12 @@
   &--back-coloured {
     background-color: $colour-cards;
   }
+  &--fiche_resto {
+    height: 15rem;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 }
