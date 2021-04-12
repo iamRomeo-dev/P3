@@ -3,6 +3,11 @@
   border-radius: 20px 20px 0 0;
   margin-top: -30px;
   position: relative;
+  @media screen and (min-width: 1024px) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .menus_list__block {
@@ -11,9 +16,6 @@
   padding-bottom: 3rem;
   position: relative;
   z-index: 1;
-  @media screen and (min-width: 1024px) {
-    width: $width-desktop;
-  }
 }
 
 .flex-center {
@@ -27,6 +29,13 @@
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
+.resto_recipe {
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    gap: 1rem;
+  }
+}
 .resto_name {
   @include font--logo;
   margin-top: 0;
@@ -36,7 +45,6 @@
 
 .entreePlatDessert h4 {
   font-weight: 100;
-
   font-family: "Roboto", sans-serif, "Trebuchet MS", Arial, Helvetica,
     sans-serif;
   font-size: 1rem;
@@ -62,6 +70,11 @@
   margin-bottom: 1rem;
   border-radius: 1rem;
   width: 100%;
+  //==========Effect at the refresh of the page==========
+  animation: card_recipeFadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transform: translateY(100px);
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
     transition: 0.5s;
@@ -86,12 +99,58 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
 }
 
-// .checked {
-//   width: 40px;
-//   height: 40px;
-//   background-color: green;
+.checked {
+  width: 3.5rem;
+  height: 100%;
+  background-color: #99e2d0;
+  border-radius: 0 1rem 1rem 0;
+  position: absolute;
+  right: -3.5rem;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //==========Effect to shift the green container (depart non visible)==========
+  opacity: 0;
+  transition: transform 1s ease-in-out;
+  &:hover {
+    //==========Effect to shift the green container (shift it from its own width)==========
+    transform: translate(-3.5rem, 0);
+    animation: fadeIn 1.5s linear forwards;
+  }
+  i {
+    margin: 0;
+    color: white;
+    font-size: 1.25rem;
+    //==========Effect to spin the check cross==========
+    transform: rotate(-359deg);
+    &:hover {
+      //==========Effect to spin the check cross==========
+      transition: transform 500ms ease-in-out;
+      transform: rotate(0deg);
+    }
+  }
+}
 
-// }
+//==========Effect at the refresh of the page==========
+@keyframes card_recipeFadeIn {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//==========Effect to shift the green container (shift it from its own width)==========
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

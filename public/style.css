@@ -143,6 +143,16 @@ body {
     opacity: 0.9;
   }
 }
+.accueil,
+header,
+.location,
+.list__block,
+.bg--color--full-width,
+.footer_container {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 3s forwards;
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 0.9;
@@ -379,6 +389,13 @@ footer {
   margin-top: -30px;
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .menus_list {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .menus_list__block {
   width: 90%;
@@ -388,11 +405,6 @@ footer {
   padding-bottom: 3rem;
   position: relative;
   z-index: 1;
-}
-@media screen and (min-width: 1024px) {
-  .menus_list__block {
-    width: 70%;
-  }
 }
 
 .flex-center {
@@ -405,6 +417,13 @@ footer {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .resto_recipe {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 .resto_name {
@@ -440,6 +459,10 @@ footer {
   margin-bottom: 1rem;
   border-radius: 1rem;
   width: 100%;
+  animation: card_recipeFadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transform: translateY(100px);
 }
 .card_recipe:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
@@ -464,6 +487,52 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.checked {
+  width: 3.5rem;
+  height: 100%;
+  background-color: #99e2d0;
+  border-radius: 0 1rem 1rem 0;
+  position: absolute;
+  right: -3.5rem;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: transform 1s ease-in-out;
+}
+.checked:hover {
+  transform: translate(-3.5rem, 0);
+  animation: fadeIn 1.5s linear forwards;
+}
+.checked i {
+  margin: 0;
+  color: white;
+  font-size: 1.25rem;
+  transform: rotate(-359deg);
+}
+.checked i:hover {
+  transition: transform 500ms ease-in-out;
+  transform: rotate(0deg);
+}
+
+@keyframes card_recipeFadeIn {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
