@@ -35,14 +35,14 @@
     width: 100%;
   }
   &--rounded {
-    border-radius: $number;
+    border-radius: 1rem;
   }
   &--purple {
     background-image: linear-gradient(-10deg, #9356dc, #ff79da);
   }
 }
 
-@mixin card {
+@mixin list {
   padding: 0.75rem;
   border: none;
   color: #000;
@@ -56,7 +56,6 @@
     transition: 0.5s;
   }
   &::before {
-    content: "1";
     position: absolute;
     left: -0.5rem;
     top: 1.5rem;
@@ -68,41 +67,22 @@
     background-color: $colour-primary;
     color: $colour-cards;
   }
-
+  @for $i from 1 through 3 {
+    &:nth-of-type(#{$i})::before {
+      content: "#{$i}";
+    }
+  }
   &--mb {
     margin-bottom: 1rem;
   }
   &--full-width {
     width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
   }
   &--rounded {
     border-radius: 1rem;
   }
-}
-
-@mixin card_resto {
-  max-height: 200px;
-  width: 100%;
-  max-width: 500px;
-  padding: 0.25rem;
-  border: none;
-  color: #000;
-  background-color: transparent;
-  cursor: pointer;
-  font-weight: 600;
-  text-align: left;
-
-  &:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
-    transition: 0.5s;
-  }
-  &--mb {
-    margin-bottom: 1rem;
-  }
-  &--rounded {
-    border-radius: 1rem;
+  &--flex-row {
+    display: flex;
+    align-items: center;
   }
 }

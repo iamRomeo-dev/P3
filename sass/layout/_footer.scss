@@ -1,0 +1,45 @@
+footer {
+  background-color: #353535;
+}
+
+.footer_container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  h4 {
+    font-family: "Shrikhand", cursive;
+
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  ul {
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.5rem;
+  }
+  li {
+    text-decoration: none;
+
+  }
+}
+
+.icon1::before {
+  @include fontAwsome;
+  content: "\f2e7";
+  font-weight: 900;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+.icon2::before {
+  @include fontAwsome;
+  content: "\f4c4";
+  font-weight: 900;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}

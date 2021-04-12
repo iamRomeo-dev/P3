@@ -10,22 +10,5 @@
 @import "./layout/header";
 @import "./layout/location";
 @import "./layout/accueil";
-@import "./layout/restaurants";
+@import "./layout/listAccueil";
 @import "./layout/footer";
-
-$cd-btn: green;
-.btnn {
-  max-width: 100px;
-  background-color: $cd-btn;
-  border: 1px solid $cd-btn;
-  border-radius: 5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  overflow: hidden;
-  padding: 1rem 2rem;
-  position: relative;
-  transition: transform 400ms;
-  &:hover {
-    transform: scale(1.15);
-  }
-}
