@@ -1,8 +1,7 @@
 //========Create a loader and make it spin=========
 .loader {
-  border: 10px solid transparent;
-  border-top: 5px solid grey;
-  border-bottom: 5px solid grey;
+  border: 10px solid rgb(243, 243, 243);
+  border-top: 10px solid $colour-secondary;
   border-radius: 50%;
   width: 100px;
   height: 100px;
