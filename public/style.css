@@ -125,6 +125,23 @@ body {
   align-items: center;
 }
 
+.loader {
+  border: 10px solid transparent;
+  border-top: 5px solid grey;
+  border-bottom: 5px solid grey;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  animation: spin 1s linear infinite, fadeOut 3s forwards;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -144,6 +161,16 @@ body {
     opacity: 0;
   }
 }
+.accueil,
+.headerLoader,
+.location,
+.list__block,
+.bg--color--full-width,
+.footerLoader {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 3s forwards;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

@@ -1,20 +1,20 @@
 //========Create a loader and make it spin=========
-// .loader {
-//   border: 10px solid transparent;
-//   border-top: 5px solid grey;
-//   border-bottom: 5px solid grey;
-//   border-radius: 50%;
-//   width: 100px;
-//   height: 100px;
-//   margin: auto;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   opacity: 0;
-//   animation: spin 1s linear infinite, fadeOut 3s forwards;
-// }
+.loader {
+  border: 10px solid transparent;
+  border-top: 5px solid grey;
+  border-bottom: 5px solid grey;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  animation: spin 1s linear infinite, fadeOut 3s forwards;
+}
 
 @keyframes spin {
   0% {
@@ -37,15 +37,15 @@
 }
 
 //===Effect in order to spend 3 secondes with a white page, then appears the home page==============
-// .accueil,
-// header,
-// .location,
-// .list__block,
-// .bg--color--full-width,
-// .footer_container {
-//   opacity: 0;
-//   animation: fadeIn 1s ease-in-out 3s forwards;
-// }
+.accueil,
+.headerLoader,
+.location,
+.list__block,
+.bg--color--full-width,
+.footerLoader {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 3s forwards;
+}
 
 @keyframes fadeIn {
   0% {
