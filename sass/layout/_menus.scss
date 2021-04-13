@@ -43,6 +43,12 @@
   font-size: 1.5rem;
 }
 
+.entreePlatDessert {
+  @media screen and (min-width: 1024px) {
+    width: 35%;
+  }
+}
+
 .entreePlatDessert h4 {
   font-weight: 100;
   font-family: "Roboto", sans-serif, "Trebuchet MS", Arial, Helvetica,
@@ -55,7 +61,7 @@
   display: flex;
   height: 3px;
   width: 30px;
-  background-color: #99e2d0;
+  background-color: $colour-tertiare;
   margin-bottom: 1.5rem;
 }
 
@@ -69,7 +75,9 @@
   position: relative;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
   //==========Effect at the refresh of the page==========
   animation: card_recipeFadeIn;
   animation-duration: 2s;
@@ -116,7 +124,7 @@
 .checked {
   width: 3.5rem;
   height: 100%;
-  background-color: #99e2d0;
+  background-color: $colour-tertiare;
   border-radius: 0 1rem 1rem 0;
   position: absolute;
   right: -3.5rem;

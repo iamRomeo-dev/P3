@@ -19,6 +19,7 @@ body {
 .btn:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
   transform: scale(1.2);
+  background-image: linear-gradient(-10deg, #a782d4, #ffa2e5);
 }
 .btn--mb {
   margin-top: 0.5rem;
@@ -50,6 +51,7 @@ body {
 .btn--blue:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
   transform: scale(1.2);
+  background-image: linear-gradient(-10deg, #a782d4, #ffa2e5);
 }
 .btn--blue--mb {
   margin-top: 0.5rem;
@@ -84,6 +86,9 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
   transition: 0.5s;
   background-color: #f5edff;
+}
+.list:hover i {
+  color: #9356DC;
 }
 .list::before {
   position: absolute;
@@ -120,23 +125,6 @@ body {
   align-items: center;
 }
 
-.loader {
-  border: 10px solid transparent;
-  border-top: 5px solid grey;
-  border-bottom: 5px solid grey;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  animation: spin 1s linear infinite, fadeOut 3s forwards;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -156,16 +144,6 @@ body {
     opacity: 0;
   }
 }
-.accueil,
-header,
-.location,
-.list__block,
-.bg--color--full-width,
-.footer_container {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out 3s forwards;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -277,8 +255,10 @@ header,
   width: 5rem;
   color: grey;
 }
-.list i:hover {
-  color: #9356dc;
+
+.list__text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -358,18 +338,36 @@ header,
   color: rgba(0, 0, 0, 0.589);
 }
 
-.fa-heart {
+.heart_fill {
   font-size: 30px;
-  transition-duration: 0.5s;
-}
-.fa-heart:hover {
-  font-weight: 900;
-  background-image: linear-gradient(-10deg, #9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  display: none;
+  animation: fadeIn 1s forwards;
 }
 
+.heart_empty {
+  font-size: 30px;
+  color: grey;
+}
+.heart_empty:hover {
+  color: transparent;
+}
+.heart_empty:hover .heart_fill {
+  color: #9356DC;
+  display: flex;
+  margin-top: -29px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   background-color: #353535;
 }
@@ -426,6 +424,11 @@ footer {
   font-size: 1rem;
 }
 
+.contact {
+  text-decoration: none;
+  color: white;
+}
+
 .menus_list {
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
@@ -476,6 +479,12 @@ footer {
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .entreePlatDessert {
+    width: 35%;
+  }
+}
+
 .entreePlatDessert h4 {
   font-weight: 100;
   font-family: "Roboto", sans-serif, "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -487,7 +496,7 @@ footer {
   display: flex;
   height: 3px;
   width: 30px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   margin-bottom: 1.5rem;
 }
 
@@ -501,7 +510,9 @@ footer {
   position: relative;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
   animation: card_recipeFadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -546,7 +557,7 @@ footer {
 .checked {
   width: 3.5rem;
   height: 100%;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
   position: absolute;
   right: -3.5rem;
