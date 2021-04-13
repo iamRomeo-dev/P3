@@ -9,6 +9,10 @@
 
 .list i {
   width: 5rem;
+  color: grey;
+  &:hover {
+    color: #9356dc;
+  }
 }
 
 .list__container {
@@ -54,8 +58,8 @@
 
 .nouveau {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   background-color: #99e2d0;
   color: #278870;
   padding: 0.5rem;
@@ -84,7 +88,6 @@
     margin-bottom: 1rem;
     color: rgba(0, 0, 0, 0.589);
   }
-  
 }
 
 .fa-heart {

@@ -8,7 +8,6 @@ body {
 }
 
 .btn {
-  padding: 0.75rem 1.5rem;
   border: none;
   color: #f6f6f6;
   background-color: #f6f6f6;
@@ -27,14 +26,19 @@ body {
 .btn--full-width {
   width: 100%;
 }
-.btn--rounded {
-  border-radius: 1rem;
-}
 .btn--purple {
   background-image: linear-gradient(-10deg, #9356dc, #ff79da);
 }
-.btn--blue {
+.btn--sizeS {
   padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+}
+.btn--sizeL {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+}
+.btn--blue {
   border: none;
   color: blue;
   background-color: #f6f6f6;
@@ -53,11 +57,17 @@ body {
 .btn--blue--full-width {
   width: 100%;
 }
-.btn--blue--rounded {
-  border-radius: 1rem;
-}
 .btn--blue--purple {
   background-image: linear-gradient(-10deg, #9356dc, #ff79da);
+}
+.btn--blue--sizeS {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+}
+.btn--blue--sizeL {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  border-radius: 2rem;
 }
 
 .list {
@@ -73,6 +83,7 @@ body {
 .list:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
   transition: 0.5s;
+  background-color: #f5edff;
 }
 .list::before {
   position: absolute;
@@ -111,36 +122,38 @@ body {
 
 .loader {
   border: 10px solid transparent;
-  border-top: 10px solid grey;
-  border-bottom: 10px solid grey;
+  border-top: 5px solid grey;
+  border-bottom: 5px solid grey;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  animation: spin 1.5s linear forwards;
   margin: auto;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  opacity: 0;
+  animation: spin 1s linear infinite, fadeOut 3s forwards;
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-    opacity: 0.9;
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0;
   }
 }
-@keyframes fadeIn {
+@keyframes fadeOut {
   0% {
-    opacity: 0;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
   }
   100% {
-    opacity: 0.9;
+    opacity: 0;
   }
 }
 .accueil,
@@ -153,17 +166,22 @@ header,
   animation: fadeIn 1s ease-in-out 3s forwards;
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
   0% {
-    opacity: 0.9;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 0.9;
   }
 }
 .header {
   text-align: center;
   border-bottom: solid 3px #dfdfdf;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    border-bottom: solid 1px transparent;
+  }
 }
 
 .header {
@@ -171,6 +189,27 @@ header,
   color: #3e3e3e;
   font-size: 1.5rem;
   padding: 0.75rem;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    font-size: 2.5rem;
+  }
+}
+.header a {
+  color: #3e3e3e;
+  text-decoration: none;
+}
+.header i {
+  font-size: 1rem;
+  position: absolute;
+  left: 1rem;
+  top: 1.41rem;
+}
+@media screen and (min-width: 1024px) {
+  .header i {
+    font-size: 1.5rem;
+    top: 1.9rem;
+  }
 }
 
 .location {
@@ -236,6 +275,10 @@ header,
 
 .list i {
   width: 5rem;
+  color: grey;
+}
+.list i:hover {
+  color: #9356dc;
 }
 
 @media screen and (min-width: 1024px) {
@@ -283,8 +326,8 @@ header,
 
 .nouveau {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   background-color: #99e2d0;
   color: #278870;
   padding: 0.5rem;
@@ -468,6 +511,17 @@ footer {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
   transition: 0.5s;
 }
+.card_recipe:hover .checked {
+  animation: move 600ms linear forwards, fadeIn 1s forwards;
+}
+.card_recipe:hover .recipeBaseline {
+  transition: 1s;
+  padding-right: 3.5rem;
+}
+.card_recipe:hover h4 {
+  transition: 1s;
+  padding-right: 3.5rem;
+}
 .card_recipe h4 {
   text-align: left;
   font-size: 1.125rem;
@@ -501,21 +555,12 @@ footer {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: transform 1s ease-in-out;
-}
-.checked:hover {
-  transform: translate(-3.5rem, 0);
-  animation: fadeIn 1.5s linear forwards;
 }
 .checked i {
   margin: 0;
   color: white;
   font-size: 1.25rem;
   transform: rotate(-359deg);
-}
-.checked i:hover {
-  transition: transform 500ms ease-in-out;
-  transform: rotate(0deg);
 }
 
 @keyframes card_recipeFadeIn {
@@ -526,12 +571,39 @@ footer {
     transform: translateY(0);
   }
 }
+@keyframes move {
+  0% {
+    transform: translateX(-1rem);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(-3.5rem);
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+  50% {
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
+  }
+}
+.card_recipe:hover i {
+  transform: translateX(-3.5rem);
+  animation: spin 600ms linear forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-359deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
