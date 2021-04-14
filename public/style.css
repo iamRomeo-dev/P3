@@ -574,7 +574,7 @@ footer {
   justify-content: space-between;
   font-size: 1rem;
 }
-.recipeBaseline span {
+.recipeBaseline .dish {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
