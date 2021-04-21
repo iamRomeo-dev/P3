@@ -45,12 +45,12 @@
   }
   &--sizeS {
     padding: 0.75rem 1.5rem;
-    border-radius: 1rem;
+    border-radius: calc(40px/2);
   }
   &--sizeL {
     padding: 1rem 2.5rem;
     font-size: 1.25rem;
-    border-radius: 2rem;
+    border-radius: calc(56px/2);
   }
 }
 

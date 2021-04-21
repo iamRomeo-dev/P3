@@ -32,12 +32,12 @@ body {
 }
 .btn--sizeS {
   padding: 0.75rem 1.5rem;
-  border-radius: 1rem;
+  border-radius: calc(40px/2);
 }
 .btn--sizeL {
   padding: 1rem 2.5rem;
   font-size: 1.25rem;
-  border-radius: 2rem;
+  border-radius: calc(56px/2);
 }
 .btn--blue {
   border: none;
@@ -64,12 +64,12 @@ body {
 }
 .btn--blue--sizeS {
   padding: 0.75rem 1.5rem;
-  border-radius: 1rem;
+  border-radius: calc(40px/2);
 }
 .btn--blue--sizeL {
   padding: 1rem 2.5rem;
   font-size: 1.25rem;
-  border-radius: 2rem;
+  border-radius: calc(56px/2);
 }
 
 .list {
@@ -379,6 +379,9 @@ body {
 }
 .heart_empty:hover .heart_fill {
   color: #9356DC;
+  background-image: linear-gradient(-10deg, #a782d4, #ffa2e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: flex;
   margin-top: -29px;
 }

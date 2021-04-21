@@ -116,6 +116,9 @@
     color: transparent;
     .heart_fill {
       color: $colour-primary;
+      background-image: linear-gradient(-10deg, #a782d4, #ffa2e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       display: flex;
       margin-top: -29px;
     }
