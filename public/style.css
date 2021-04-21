@@ -546,13 +546,16 @@ footer {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   transform: translateY(100px);
+  transition: transform 1500ms;
 }
 .card_recipe:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
-  transition: 0.5s;
+  transition: 1s;
+  transition: transform 1500ms;
 }
 .card_recipe:hover .checked {
   animation: move 600ms linear forwards, fadeIn 1s forwards;
+  transition: transform 1500ms;
 }
 .card_recipe:hover .recipeBaseline {
   transition: 1s;
@@ -584,12 +587,11 @@ footer {
 }
 
 .checked {
-  width: 3.5rem;
   height: 100%;
   background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
   position: absolute;
-  right: -3.5rem;
+  right: 0rem;
   top: 0;
   display: flex;
   align-items: center;
@@ -613,13 +615,13 @@ footer {
 }
 @keyframes move {
   0% {
-    transform: translateX(-1rem);
+    width: 0px;
   }
   50% {
-    transform: translateX(-2rem);
+    width: 1rem;
   }
   100% {
-    transform: translateX(-3.5rem);
+    width: 3.5rem;
   }
 }
 @keyframes fadeIn {
