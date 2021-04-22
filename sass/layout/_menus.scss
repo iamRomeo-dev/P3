@@ -83,18 +83,17 @@
   animation-duration: 2s;
   animation-fill-mode: forwards;
   transform: translateY(100px);
-  transition: transform 1500ms;
+  transition: transform 1000ms ease-in-out;
+  overflow: hidden;
+
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.329);
-    transition: 1s;
-    transition: transform 1500ms;
+
     //==========Effect to shift the green container (shift it from its own width)==========
     .checked {
-      animation: move 600ms linear forwards, fadeIn 1s forwards;
-      transition: transform 1500ms;
+      transform: translateX(0);
     }
     .recipeBaseline {
-      transition: 1s;
       padding-right: 3.5rem;
     }
     h4 {
@@ -113,10 +112,15 @@
   }
 }
 
+.card_recipe:hover i {
+  transform: rotate(360deg);
+}
+
 .recipeBaseline {
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
+  transition: all 1000ms ease-in-out;
   .dish {
     white-space: nowrap;
     overflow: hidden;
@@ -125,7 +129,8 @@
 }
 
 .checked {
-  //width: 3.5rem;
+  width: 3.5rem;
+  transform: translateX(3.5rem);
   height: 100%;
   background-color: $colour-tertiare;
   border-radius: 0 1rem 1rem 0;
@@ -136,12 +141,14 @@
   align-items: center;
   justify-content: center;
   //==========Effect to shift the green container (depart non visible)==========
-  opacity: 0;
+  opacity: 1;
+  transition: all 1000ms ease-in-out;
   i {
     margin: 0;
     color: white;
     font-size: 1.25rem;
-    transform: rotate(-359deg);
+    transform: rotate(0);
+    transition: transform 1000ms ease-in-out;
   }
 }
 
@@ -152,43 +159,5 @@
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-//==========Effect to shift the green container (shift it from its own width)==========
-@keyframes move {
-  0% {
-    width: 0px;
-  }
-  50% {
-    width: 1rem;
-  }
-  100% {
-    width: 3.5rem;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-//==========Effect to spin the check cross==========
-.card_recipe:hover i {
-  transform: translateX(-3.5rem);
-  animation: spin 600ms linear forwards;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(-359deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
